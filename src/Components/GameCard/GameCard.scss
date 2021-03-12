@@ -1,12 +1,9 @@
-@use '../styles/partials/colors.scss' as *;
-
 .game-card {
     height: 400px;
     width: 400px;
     border: 2px solid black;
     border-radius: 5px;
     padding: 0.5rem;
-    background-color: $main;
 
     &__thumbnail {
         width: 100%;
