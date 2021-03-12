@@ -1,0 +1,55 @@
+@use  '../../styles/Partials/variable' as *;
+// @use '../../styles/Partials/resets' as *;
+
+.homepage{
+    padding-bottom: 5rem;
+    background-color: $cp-black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    &__info{
+        padding-bottom: 1.5rem;
+        color: $cp-white;
+    }
+
+    &__title{
+        color: $cp-white;
+        font-size: 100px;
+        padding: 3rem 0 5rem 0;
+    }
+
+    &__form{
+        padding: 3rem 3rem 3rem 3rem;
+        background-color: $cp-blue;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+
+        &--label{
+            color: $cp-white;
+            font-size: 30px;
+        }
+        &--picker{
+            color: $cp-white;
+            background-color: $cp-black;
+            padding: .3rem;
+           border: 3px solid $cp-black;
+           border-radius: 10px;
+            margin-left: 3rem;
+        }
+
+        &--btn{
+            color: $cp-white;
+            background-color: $cp-black;
+            padding: .3rem;
+           margin: 3rem 0 3rem  0;
+           border: 3px solid $cp-black;
+           border-radius: 10px;
+        }
+
+    }
+
+}

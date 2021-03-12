@@ -1,3 +1,5 @@
+@use '../../styles/Partials/variable' as *;
+
 .games-page {
     &__game-list {
         list-style: none;

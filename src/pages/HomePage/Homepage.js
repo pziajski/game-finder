@@ -1,21 +1,27 @@
 import options from '../../Data/Options';
+import './Homepage.scss';
 
 function Homepage(props) {
-    const { submit } = props;
+
     return(
+        
         <section className="homepage">
             <h1 className="homepage__title">FindIt</h1>
-            <form className='homepage__form' onSubmit={(e) => submit(e)}>
-                <label>Pick a Genre 
-                    <select name='select' defaultValue='none'>
-                        <option value='none'>none</option>
-                        {options.map(genre =>
-                            <option key={genre} value={genre}> {genre}</option>
-                        )}
-                    </select>
-                </label>
-                <button>Submit</button>
+            <h2 className='homepage__info'>Bored and Broke no Problem </h2>
+            <form className='homepage__form' onSubmit={props.submit}>
+            <label className='homepage__form--label'>Pick a Genere 
+                <select className="homepage__form--picker" name='select'>
+                    <option  selected value='none'>none</option>
+                    {options.map(genere => {
+                        return (
+                            <option value={genere}> {genere}</option>
+                        )
+                    })}
+                </select>
+            </label>
+            <button className='homepage__form--btn'>Submit</button>
             </form>
+
         </section>
 
     )

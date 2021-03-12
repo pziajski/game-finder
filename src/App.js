@@ -1,13 +1,15 @@
 import axios from 'axios';
 import { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Homepage from './pages/HomePage/Homepage'
+import Homepage from './pages/HomePage/Homepage';
 import GamesPage from './pages/GamesPage/GamesPage';
-import { api__url, api__key } from './Data/ApiDetails.js'
+import { api__url, api__key } from './Data/ApiDetails.js';
+import './styles/App.scss';
 
 class App extends Component {
     state = {
-        gameDisplay: []
+        gameDisplay: [],
+        isGameSelected: false
     }
 
     handleSubmit = (event) => {
@@ -44,6 +46,10 @@ class App extends Component {
                     })
                 })
         }
+    }
+
+    launchGameInfoWindow = (e) => {
+        // this.state.isSelected
     }
 
     render() {
