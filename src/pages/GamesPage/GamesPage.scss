@@ -1,0 +1,9 @@
+.games-page {
+    &__game-list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+}
