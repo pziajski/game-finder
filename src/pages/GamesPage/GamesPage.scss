@@ -1,6 +1,7 @@
 @use '../../styles/Partials/variable' as *;
 
 .games-page {
+    background-color: $cp-black;
     &__game-list {
         list-style: none;
         display: flex;
