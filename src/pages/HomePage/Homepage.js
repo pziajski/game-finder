@@ -1,5 +1,6 @@
 import options from '../../Data/Options';
 import './Homepage.scss';
+import arrow from '../../images/down-arrow.svg'
 
 function Homepage(props) {
     return(
@@ -17,6 +18,7 @@ function Homepage(props) {
             </label>
             <button className='homepage__form--btn'>Submit</button>
             </form>
+            <img className="homepage__arrow" src={arrow}></img>
 
         </div>
     )

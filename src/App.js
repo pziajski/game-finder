@@ -57,7 +57,7 @@ class App extends Component {
                 }
             })
             .then((response) => {
-                console.log(response.data);
+                // console.log(response.data);
                 // this.setState({
                 //     gameSelected: response.data,
                 //     isGameSelected: true
