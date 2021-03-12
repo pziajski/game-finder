@@ -1,5 +1,7 @@
 import react from 'react'
 import options from '../Data/Options'
+import './styles/Homepage.scss'
+import arrow from '../assets/images/arrow.jpg'
 
 function Homepage(props) {
 
@@ -7,10 +9,11 @@ function Homepage(props) {
         
         <section className="homepage">
             <h1 className="homepage__title">FindIt</h1>
+            <h2 className='homepage__info'>Bored and Broke no Problem </h2>
             <form className='homepage__form' onSubmit={props.submit}>
-            <label>Pick a Genere 
-                <select name='select'>
-                    <option selected value='none'>none</option>
+            <label className='homepage__form--label'>Pick a Genere 
+                <select className="homepage__form--picker" name='select'>
+                    <option  selected value='none'>none</option>
                     {options.map(genere => {
                         return (
                             <option value={genere}> {genere}</option>
@@ -18,7 +21,7 @@ function Homepage(props) {
                     })}
                 </select>
             </label>
-            <button>Submit</button>
+            <button className='homepage__form--btn'>Submit</button>
             </form>
 
         </section>
