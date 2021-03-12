@@ -23,7 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 .vscode/
-BrainFlix-Sprint*
 *.css.map
 *.pdf
 *.md
