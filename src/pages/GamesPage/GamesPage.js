@@ -3,13 +3,14 @@ import GameCard from '../../Components/GameCard/GameCard';
 import './GamesPage.scss';
 
 const GamesPage = (props) => {
-    const { games } = props; // TODO change games to proper prop
+    const { games, selectGame } = props;
+
     return (
         <div className='games-page'>
             <ul className='games-page__game-list'>
                 {games.map(game => 
-                    <li key={game.id}>
-                        <GameCard gameInfo={game} />
+                    <li key={game.id} onClick={() => selectGame(game.id)}>
+                        <GameCard gameInfo={game}/>
                     </li>
                 )}
             </ul>
