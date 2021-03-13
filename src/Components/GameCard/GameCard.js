@@ -6,7 +6,7 @@ const GameCard = (props) => {
 
     return (
         <section className='game-card'>
-            <img className='game-card__thumbnail' src={thumbnail} />
+            <img className='game-card__thumbnail' src={thumbnail} alt={title} />
             <div className='game-card__header'>
                 <h3 className='game-card__title'>{title}</h3>
                 <p className='game-card__genre'>{genre}</p>
