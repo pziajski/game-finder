@@ -1,9 +1,12 @@
 import axios from 'axios';
 import { Component } from 'react';
+
 import Homepage from './pages/HomePage/Homepage';
 import GamesPage from './pages/GamesPage/GamesPage';
-import { api__url, api__key } from './Data/ApiDetails.js';
 import './styles/App.scss';
+
+const API_URL = process.env.REACT_APP_API_URL;
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 class App extends Component {
     state = {
@@ -17,9 +20,9 @@ class App extends Component {
         event.preventDefault();
         if (genre === 'none') {
             axios
-                .get(api__url + `/games?sort-by=release-date`, {
+                .get(`${API_URL}/games?sort-by=release-date`, {
                     headers: {
-                        'x-rapidapi-key': api__key,
+                        'x-rapidapi-key': API_KEY,
                         'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com',
                     }
                 })
@@ -34,9 +37,9 @@ class App extends Component {
         } else {
             event.preventDefault();
             axios
-                .get(api__url + `/games?category=${genre}&sort-by=release-date`, {
+                .get(`${API_URL}/games?category=${genre}&sort-by=release-date`, {
                     headers: {
-                        'x-rapidapi-key': api__key,
+                        'x-rapidapi-key': API_KEY,
                         'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com',
                     }
                 })
@@ -50,9 +53,9 @@ class App extends Component {
 
     launchGameInfoWindow = (id) => {
         axios
-            .get(api__url + `/game?id=${id}`, {
+            .get(`${API_URL}/game?id=${id}`, {
                 headers: {
-                    'x-rapidapi-key': api__key,
+                    'x-rapidapi-key': API_KEY,
                     'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com',
                 }
             })
