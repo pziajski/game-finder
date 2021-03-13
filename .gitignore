@@ -27,3 +27,4 @@ yarn-error.log*
 *.pdf
 *.md
 **/temp-game-list.json
+.env
